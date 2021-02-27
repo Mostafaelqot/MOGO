@@ -1,0 +1,43 @@
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $overlay-color;
+  opacity: 0;
+}
+.overlay-shadow {
+  @extend %shadow;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $overlay-color;
+  opacity: 0;
+}
+.overlay-shadow-com {
+  @extend %shadow_com;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $overlay-color;
+  opacity: 0;
+}
+
+figure:hover .overlay-shadow-com {
+  transition: 0.9s ease;
+  opacity: 1;
+}
+
+figure:hover .overlay-shadow {
+  transition: 0.9s ease;
+  opacity: 1;
+}
+figure:hover .overlay {
+  transition: 0.9s ease;
+  opacity: 1;
+}
+
+.scroll {
+  position: relative;
+  height: 150px;
+  overflow-y: scroll;
+}

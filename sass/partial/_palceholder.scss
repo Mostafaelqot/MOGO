@@ -1,0 +1,51 @@
+%line-under::after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #fb397d;
+  margin: 20px auto 0 ;
+
+}
+%line-side::after {
+  content: " ";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #fb397d;
+  position: absolute;
+  left: 18%;
+  bottom: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+%shadow {
+  opacity: 1;
+  box-shadow: 5px 5px 10px 0px #3bd3ba;
+}
+%shadow_com {
+  opacity: 1;
+  box-shadow: 10px 10px 0px 0px #3bd3ba;
+}
+
+
+
+
+
+
+
+
+
+%shap{
+height: 10px;
+width: 10px;
+   transform: rotate(50deg);
+}

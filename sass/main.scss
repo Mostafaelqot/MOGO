@@ -1,0 +1,316 @@
+@import "../sass/partial/Variables";
+@import "../sass/partial/palceholder";
+@import "../sass/partial/class";
+@import "../sass/partial/mixin";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+i {
+  color: $primary-color;
+}
+
+a {
+  font-family: "robotoregular";
+  font-size: 0.875rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: "Kaushan Script";
+}
+p {
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  font-family: $main-font;
+  color: $secandry-color;
+}
+h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  text-transform: uppercase;
+  font-family: $title-font;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  h2 {
+    @extend %line-under;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.875rem;
+  }
+  p {
+    margin-top: 45px;
+  }
+}
+.hero-section {
+  background-image: linear-gradient(
+      rgba(219, 116, 117, 0.6),
+      rgba(228, 205, 125, 0.75)
+    ),
+    url(../style/Images/homebg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    display: flex;
+  flex-direction: column;
+ justify-content: flex-end; 
+
+  overflow: hidden;
+  h1 {
+    font-size: 7.5rem;
+    font-weight: 700;
+    font-family: "Montserrat";
+  }
+  h4 {
+    font-size: 4.5rem;
+  }
+
+  li {
+    @extend%shap;
+  }
+  button {
+    color: white;
+    border: white solid 3px;
+    background: transparent;
+  }
+}
+.navbar.solid {
+  background-color: #353334;
+  transition: background-color 2s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+.counter-section {
+  background-image: linear-gradient($primary-color);
+
+  p {
+    font-family: $title-font;
+    font-weight: 400;
+  }
+}
+.devices-section {
+  background-image: linear-gradient(rgba(237, 237, 237, 0.8)),
+    url(../style/Images/divicebg.jpg);
+
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .small-phone {
+    bottom: -11%;
+    right: 16%;
+  }
+}
+
+.scroll::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+  color: $primary-color;
+  background-color: rgb(238, 237, 237); /* or add it to the track */
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 2px;
+}
+
+.review-section {
+  background: #f8f8f8;
+  h4 {
+    @extend%line-side;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+  figure {
+    width: 20%;
+  }
+}
+
+.carousel-control-next-icon {
+  background-image: url(../style/Images/next.png);
+}
+.carousel-control-prev-icon {
+  background-image: url(../style/Images/prev.png);
+}
+
+.team-section {
+  i {
+    margin-top: 50%;
+    padding: 20px;
+    color: #f38181;
+    background-color: rgb(252, 227, 138);
+  }
+}
+.photos-section {
+  background: #f8f8f8;
+}
+
+.work-collection {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 20vw);
+
+    .item-1 {
+      grid-column-start: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .item-2 {
+      grid-column-start: 4;
+      grid-row-start: 2;
+    }
+  }
+  figure {
+    margin-bottom: 0px;
+  }
+}
+.clients-section {
+  background-image: linear-gradient(rgba(237, 237, 237, 0.8)),
+    url(../style/Images/clientbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  figure {
+    width: 20%;
+  }
+}
+
+.blog-section {
+  .card {
+    text-align: start;
+    border: 0px;
+  }
+  .card-body {
+    padding: 0px;
+  }
+  span {
+    margin-left: -6%;
+    width: 12%;
+    height: 53px;
+    margin-top: -18%;
+    background-color: rgb(59, 211, 186);
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    border-radius: 0px;
+  }
+}
+.map-section {
+  background-image: linear-gradient(rgba(237, 237, 237, 0.8)),
+    url(../style/Images/mapbg.jpg);
+  background-size: cover;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  i {
+    padding-top: 7%;
+  }
+}
+.footer {
+  figure {
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+  .btn {
+    color: white;
+    background-color: $primary-color;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+  .review-section {
+    figure {
+      margin-top: 11px;
+    }
+  }
+  .team-section i {
+    padding: 10px;
+  }
+  .blog-section span {
+    width: 23%;
+    margin-left: 0;
+  }
+
+  .devices-section {
+    figure {
+      margin-bottom: 0px;
+    }
+    .small-phone {
+      width: 60%;
+      right: 20%;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  :root {
+    font-size: 10px;
+  }
+.hero-section{ 
+  display: flex;
+  flex-direction: column;
+ justify-content: center; 
+  h1 {
+    font-size: 6.5rem; 
+    margin-bottom: 8%;
+  }
+  button{
+    margin: 0px 5% 0px 5%;
+  }
+}
+  .review-section {
+    p {
+      font-size: 10px;
+      line-height: 1.5rem;
+    }
+    figure {
+      padding: 20px 10px 0 0;
+      margin-top: 10px;
+    }
+  }
+  .map-section {
+    height: 30vh;
+    i {
+      padding-top: 20%;
+    }
+  }
+
+  .devices-section {
+    figure {
+      margin-bottom: 0px;
+    }
+    .small-phone {
+      width: 60%;
+      right: 1%;
+    }
+  }
+  .work-collection {
+    i {
+      font-size: 10px;
+    }
+    h5,
+    p {
+      font-size: 8px;
+      margin:0px;
+    }
+  }
+}
